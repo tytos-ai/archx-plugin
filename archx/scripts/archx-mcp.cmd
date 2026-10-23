@@ -7,7 +7,8 @@ if not defined ARCHX_APP set "ARCHX_APP=%LOCALAPPDATA%\ArchiGPT\ArchiGPT.exe"
 if not exist "%ARCHX_APP%" goto no_app
 for %%I in ("%ARCHX_APP%") do set "ARCHX_HOME=%%~dpI"
 set "ARCHX_PYTHON="
-rem Squirrel keeps the current and the previous version side by side; the last folder in name order wins.
+rem Squirrel keeps the current and the previous version side by side; the last folder in name order wins. Name
+rem order is not version order (app-0.0.99 after app-0.0.100), but the Python of either version runs the relay.
 for /d %%D in ("%ARCHX_HOME%app-*") do if exist "%%~fD\resources\document-runtime\python\python.exe" set "ARCHX_PYTHON=%%~fD\resources\document-runtime\python\python.exe"
 if not defined ARCHX_PYTHON goto no_python
 "%ARCHX_PYTHON%" -I -B -X utf8 "%~dp0archx_mcp_relay.py"

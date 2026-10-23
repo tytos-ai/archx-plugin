@@ -120,7 +120,7 @@ class PipeChannel:
         try:
             overlapped, _ = _winapi.ReadFile(self._handle, 65536, overlapped=True)
             self._reading = overlapped
-            if self._closed:  # shutdown() ran before it could see this read
+            if self._closed:  # shutdown() ran between ReadFile and the line above and saw no read to cancel
                 self._cancel(overlapped)
             _, error = overlapped.GetOverlappedResult(True)
         except OSError:
@@ -415,8 +415,10 @@ class Relay:
             lost = list(self._pending.values()) if current else []
             if current:
                 self._pending.clear()
-            for slot in self._waiting.values():
-                slot[0].set()
+                # Only the open connection's handshake waits here; a connection that was already let go (idle, refused)
+                # and ends late must not wake the handshake on its successor.
+                for slot in self._waiting.values():
+                    slot[0].set()
         for request_id in lost:
             self.answer_error(request_id, ENDED)
 
