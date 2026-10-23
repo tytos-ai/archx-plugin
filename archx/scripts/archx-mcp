@@ -1,0 +1,16 @@
+#!/bin/sh
+# Starts the ArchX plugin's MCP connection: finds the installed ArchX app and relays to it with the Python ArchX bundles.
+set -eu
+fail() { printf 'ArchX: %s\n' "$1" >&2; exit 1; }
+[ "$(uname -s)" = Darwin ] || fail 'Das ArchX-Plugin läuft unter macOS und Windows.'
+app="${ARCHX_APP:-}"
+if [ -z "$app" ]; then
+  for candidate in /Applications/ArchX.app "${HOME:?}/Applications/ArchX.app"; do
+    if [ -d "$candidate" ]; then app="$candidate"; break; fi
+  done
+fi
+[ -n "$app" ] || fail 'Keine installierte ArchX-App gefunden. Installieren Sie ArchX von architekten.frontierx.ch.'
+python="$app/Contents/Resources/document-runtime/python/bin/python3"
+[ -x "$python" ] || fail "Die ArchX-Installation unter $app ist unvollständig. Installieren Sie ArchX erneut."
+export ARCHX_APP="$app"
+exec "$python" -I -B -X utf8 "$(dirname "$0")/archx_mcp_relay.py"

@@ -1,0 +1,42 @@
+{
+  "name": "archx",
+  "version": "0.1.5",
+  "description": "Die Fachwerkzeuge der installierten ArchX-App für Schweizer Architekturbüros: Ausmass aus Plänen und IFC, Offertvergleich und Vergabeantrag, Machbarkeitsstudie, Baueingabe-Nachweis und 3D-Modell.",
+  "author": {
+    "name": "FrontierX",
+    "url": "https://architekten.frontierx.ch"
+  },
+  "homepage": "https://architekten.frontierx.ch/archx/",
+  "license": "Proprietary",
+  "keywords": [
+    "architektur",
+    "schweiz",
+    "offertvergleich",
+    "machbarkeitsstudie",
+    "baueingabe",
+    "sia-416",
+    "ifc"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./codex-mcp.json",
+  "interface": {
+    "displayName": "ArchX",
+    "shortDescription": "Offerten, Studien, Nachweise und Pläne",
+    "longDescription": "ArchX von FrontierX bringt seine Fachwerkzeuge in Codex: Ausmass aus Plänen und IFC, Offertvergleich mit Preisspiegel und Vergabeantrag, Machbarkeitsstudie mit amtlichen Grundlagen, Baueingabe-Nachweis nach SIA 416 und 3D-Modelle. Die Werkzeuge kommen live aus der installierten ArchX-App; jedes ArchX-Update gilt sofort auch hier.",
+    "developerName": "FrontierX",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://architekten.frontierx.ch/archx/",
+    "defaultPrompt": [
+      "Vergleiche die Offerten in diesem Ordner und erstelle Preisspiegel und Vergabeantrag.",
+      "Mach für die Parzelle 1234 Musterdorf eine Machbarkeitsstudie."
+    ],
+    "composerIcon": "./assets/archx-small.svg",
+    "logo": "./assets/archx.png",
+    "brandColor": "#6CF0FF"
+  }
+}

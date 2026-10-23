@@ -1,0 +1,20 @@
+{
+  "name": "frontierx",
+  "interface": {
+    "displayName": "FrontierX"
+  },
+  "plugins": [
+    {
+      "name": "archx",
+      "source": {
+        "source": "local",
+        "path": "./archx"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

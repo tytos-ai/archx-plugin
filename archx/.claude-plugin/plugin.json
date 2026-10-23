@@ -1,0 +1,22 @@
+{
+  "name": "archx",
+  "displayName": "ArchX",
+  "version": "0.1.5",
+  "description": "Die Fachwerkzeuge der installierten ArchX-App für Schweizer Architekturbüros: Ausmass aus Plänen und IFC, Offertvergleich und Vergabeantrag, Machbarkeitsstudie, Baueingabe-Nachweis und 3D-Modell.",
+  "author": {
+    "name": "FrontierX",
+    "url": "https://architekten.frontierx.ch"
+  },
+  "homepage": "https://architekten.frontierx.ch/archx/",
+  "license": "Proprietary",
+  "keywords": [
+    "architektur",
+    "schweiz",
+    "offertvergleich",
+    "machbarkeitsstudie",
+    "baueingabe",
+    "sia-416",
+    "ifc"
+  ],
+  "icon": "./assets/archx.png"
+}
