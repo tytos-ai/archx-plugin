@@ -9,7 +9,7 @@
     {
       "name": "archx",
       "source": "./archx",
-      "description": "Die Fachwerkzeuge der installierten ArchX-App: Ausmass aus Plänen und IFC, Offertvergleich, Machbarkeitsstudie, Baueingabe-Nachweis und 3D-Modell."
+      "description": "Die Fachwerkzeuge der installierten ArchX-App für Büros in der Schweiz und in Deutschland: Mengen aus Plänen und IFC, Offertvergleich bzw. Angebotsprüfung, GAEB, Kosten, Nachweise, Machbarkeitsstudie und 3D-Modell."
     }
   ]
 }

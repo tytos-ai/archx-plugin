@@ -1,7 +1,7 @@
 {
   "name": "archx",
-  "version": "0.1.5",
-  "description": "Die Fachwerkzeuge der installierten ArchX-App für Schweizer Architekturbüros: Ausmass aus Plänen und IFC, Offertvergleich und Vergabeantrag, Machbarkeitsstudie, Baueingabe-Nachweis und 3D-Modell.",
+  "version": "0.1.6",
+  "description": "Die Fachwerkzeuge der installierten ArchX-App für Architekturbüros in der Schweiz und in Deutschland: Mengen aus Plänen und IFC, Offertvergleich bzw. Angebotsprüfung mit Preisspiegel, GAEB, Kosten nach BKP oder DIN 276, Nachweise, Machbarkeitsstudie und 3D-Modell.",
   "author": {
     "name": "FrontierX",
     "url": "https://architekten.frontierx.ch"
@@ -11,9 +11,16 @@
   "keywords": [
     "architektur",
     "schweiz",
+    "deutschland",
     "offertvergleich",
+    "angebotspruefung",
+    "vob",
+    "gaeb",
+    "din-276",
+    "hoai",
     "machbarkeitsstudie",
     "baueingabe",
+    "bauantrag",
     "sia-416",
     "ifc"
   ],
@@ -21,8 +28,8 @@
   "mcpServers": "./codex-mcp.json",
   "interface": {
     "displayName": "ArchX",
-    "shortDescription": "Offerten, Studien, Nachweise und Pläne",
-    "longDescription": "ArchX von FrontierX bringt seine Fachwerkzeuge in Codex: Ausmass aus Plänen und IFC, Offertvergleich mit Preisspiegel und Vergabeantrag, Machbarkeitsstudie mit amtlichen Grundlagen, Baueingabe-Nachweis nach SIA 416 und 3D-Modelle. Die Werkzeuge kommen live aus der installierten ArchX-App; jedes ArchX-Update gilt sofort auch hier.",
+    "shortDescription": "Offerten und Angebote, Kosten, Nachweise und Pläne",
+    "longDescription": "ArchX von FrontierX bringt seine Fachwerkzeuge in Codex, für Büros in der Schweiz und in Deutschland: Mengen aus Plänen und IFC, Offertvergleich mit Vergabeantrag bzw. Angebotsprüfung mit Vergabevorschlag nach VOB/A, Leistungsverzeichnisse im GAEB-Format, Kosten nach BKP oder DIN 276, Baueingabe-Nachweis nach SIA 416 bzw. GRZ, GFZ und BMZ, Machbarkeitsstudie mit amtlichen Grundlagen (Schweiz), Fachwissen zu HOAI und Bauantrag (Deutschland) und 3D-Modelle. Die Werkzeuge kommen live aus der installierten ArchX-App, passend zum Land des Büros; jedes ArchX-Update gilt sofort auch hier.",
     "developerName": "FrontierX",
     "category": "Productivity",
     "capabilities": [
@@ -33,7 +40,7 @@
     "websiteURL": "https://architekten.frontierx.ch/archx/",
     "defaultPrompt": [
       "Vergleiche die Offerten in diesem Ordner und erstelle Preisspiegel und Vergabeantrag.",
-      "Mach für die Parzelle 1234 Musterdorf eine Machbarkeitsstudie."
+      "Prüfe die Angebote in diesem Ordner und erstelle Preisspiegel und Vergabevorschlag."
     ],
     "composerIcon": "./assets/archx-small.svg",
     "logo": "./assets/archx.png",

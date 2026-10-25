@@ -6,8 +6,8 @@ named pipe on Windows. The relay passes the newline-delimited JSON-RPC messages 
 background when it is not running yet. It runs with the Python that ArchX bundles, so the plugin needs nothing else installed.
 
 The relay holds a connection to ArchX only while the host uses it. Every Codex thread and every Claude session starts its
-own relay and keeps it for as long as it lives, but ArchX serves a limited number of connections at once (23.10.2026 on Tim's
-Mac: 10 Codex threads and 6 Claude sessions held all 16, and the 17th session got no tools). After IDLE_SECONDS without an
+own relay and keeps it for as long as it lives, but ArchX serves a limited number of connections at once (up to 0.0.78: 16,
+so a day of open Codex threads and Claude sessions took them all and the next session got no tools). After IDLE_SECONDS without an
 open request the relay closes its connection; the next message opens a new one and repeats the host's initialize handshake
 first, so the host never notices. The same reconnect carries a session across an ArchX restart.
 

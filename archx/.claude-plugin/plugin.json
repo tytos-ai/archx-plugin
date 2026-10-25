@@ -1,8 +1,8 @@
 {
   "name": "archx",
   "displayName": "ArchX",
-  "version": "0.1.5",
-  "description": "Die Fachwerkzeuge der installierten ArchX-App für Schweizer Architekturbüros: Ausmass aus Plänen und IFC, Offertvergleich und Vergabeantrag, Machbarkeitsstudie, Baueingabe-Nachweis und 3D-Modell.",
+  "version": "0.1.6",
+  "description": "Die Fachwerkzeuge der installierten ArchX-App für Architekturbüros in der Schweiz und in Deutschland: Mengen aus Plänen und IFC, Offertvergleich bzw. Angebotsprüfung mit Preisspiegel, GAEB, Kosten nach BKP oder DIN 276, Nachweise, Machbarkeitsstudie und 3D-Modell.",
   "author": {
     "name": "FrontierX",
     "url": "https://architekten.frontierx.ch"
@@ -12,9 +12,16 @@
   "keywords": [
     "architektur",
     "schweiz",
+    "deutschland",
     "offertvergleich",
+    "angebotspruefung",
+    "vob",
+    "gaeb",
+    "din-276",
+    "hoai",
     "machbarkeitsstudie",
     "baueingabe",
+    "bauantrag",
     "sia-416",
     "ifc"
   ],

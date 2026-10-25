@@ -1,9 +1,14 @@
 # ArchX für Codex und Claude
 
-Mit diesem Plugin arbeiten Codex und Claude Code mit den Fachwerkzeugen Ihrer installierten ArchX-App: Ausmass aus Plänen
-und IFC, Offertvergleich mit Preisspiegel und Vergabeantrag, Kostenvoranschlag und Kostenschätzung nach BKP,
-Machbarkeitsstudie, Baueingabe-Nachweis (Bauziffern, SIA 416), Grundrisse und masshaltige 2D-Pläne, 3D-Modell aus Plänen
-und die ArchX-Hilfe. Es sind dieselben Werkzeuge und Arbeitsanweisungen wie in einem Gespräch in ArchX.
+Mit diesem Plugin arbeiten Codex und Claude Code mit den Fachwerkzeugen Ihrer installierten ArchX-App. Es sind dieselben
+Werkzeuge und Arbeitsanweisungen wie in einem Gespräch in ArchX, passend zum Land Ihres Büros:
+
+- **Schweiz:** Ausmass aus Plänen und IFC, Offertvergleich mit Preisspiegel und Vergabeantrag, Kostenvoranschlag und
+  Kostenschätzung nach BKP, Machbarkeitsstudie, Baueingabe-Nachweis (Bauziffern, SIA 416), Grundrisse und masshaltige
+  2D-Pläne, 3D-Modell aus Plänen und die ArchX-Hilfe.
+- **Deutschland:** Aufmaß aus Plänen und IFC, Angebotsprüfung mit Preisspiegel und Vergabevorschlag (VOB/A),
+  Leistungsverzeichnisse im GAEB-Format, Kostenschätzung und Kostenberechnung nach DIN 276, GRZ, GFZ und BMZ nach
+  BauNVO, maßhaltige 2D-Pläne, 3D-Modell, Fachwissen zu HOAI, Bauantrag und Bauüberwachung und die ArchX-Hilfe.
 
 ## Voraussetzungen
 
@@ -30,7 +35,8 @@ Claude Code, in einer Sitzung:
 ```
 
 Danach eine neue Unterhaltung beginnen. Fragen Sie zum Beispiel: «Vergleiche die Offerten in diesem Ordner und erstelle
-Preisspiegel und Vergabeantrag.»
+Preisspiegel und Vergabeantrag.» oder „Prüfe die Angebote in diesem Ordner und erstelle Preisspiegel und Vergabevorschlag.“
+Wechselt das Land des Büros in ArchX, beginnen Sie eine neue Unterhaltung: Die Werkzeuge des anderen Landes gelten erst dort.
 
 Updates: `codex plugin marketplace upgrade frontierx` bzw. `/plugin marketplace update frontierx` in Claude Code. Neue
 Werkzeuge brauchen kein Plugin-Update: Sie kommen mit jedem ArchX-Update.
