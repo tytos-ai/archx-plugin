@@ -1,0 +1,49 @@
+{
+  "name": "archx-en",
+  "version": "0.1.7",
+  "description": "The professional tools of the installed ArchX app for architectural practices in the United Kingdom and architecture firms in the United States: planning and code checks, feasibility and zoning, areas, costs, tenders and bids, contract and construction administration, site photos, drawing review, floor plans, CAD drawings and 3D models.",
+  "author": {
+    "name": "FrontierX",
+    "url": "https://architekten.frontierx.ch"
+  },
+  "homepage": "https://architekten.frontierx.ch/archx/",
+  "license": "Proprietary",
+  "keywords": [
+    "architecture",
+    "united-kingdom",
+    "united-states",
+    "permitted-development",
+    "building-regulations",
+    "feasibility",
+    "zoning",
+    "code-review",
+    "cost-plan",
+    "tender",
+    "bid-leveling",
+    "contract-administration",
+    "construction-administration",
+    "ifc"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./codex-mcp.json",
+  "interface": {
+    "displayName": "ArchX",
+    "shortDescription": "Planning, codes, costs, tenders and drawings",
+    "longDescription": "ArchX by FrontierX brings its professional tools to Codex, for practices in the United Kingdom and firms in the United States: permitted development, householder applications and Building Regulations or code and permit review, feasibility studies and zoning envelopes, area schedules, cost plans and quantities, schedules of works, tender reports and bid leveling, contract and construction administration, site photos, drawing review with consultants' drawings, floor plans, dimensioned CAD drawings and 3D models. The tools come live from the installed ArchX app, matching the office's country; every ArchX update applies here at once.",
+    "developerName": "FrontierX",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://architekten.frontierx.ch/archx/",
+    "defaultPrompt": [
+      "Check whether the rear extension in these drawings falls within permitted development.",
+      "Run a code and permit review for this project and list what to confirm with the AHJ."
+    ],
+    "composerIcon": "./assets/archx-small.svg",
+    "logo": "./assets/archx.png",
+    "brandColor": "#6CF0FF"
+  }
+}

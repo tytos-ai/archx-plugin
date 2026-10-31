@@ -14,7 +14,8 @@ Werkzeuge und Arbeitsanweisungen wie in einem Gespräch in ArchX, passend zum La
 
 - ArchX auf dem Mac oder unter Windows, angemeldet, mit Lizenz oder laufendem Test
   ([architekten.frontierx.ch](https://architekten.frontierx.ch/archx/)).
-- Ein Büro in der Schweiz oder in Deutschland (ArchX › Einstellungen › Land).
+- Ein Büro in der Schweiz oder in Deutschland (ArchX › Einstellungen › Land). Büros im Vereinigten Königreich und in den
+  USA installieren die englische Variante `archx-en` (siehe «ArchX for Codex and Claude» unten).
 - Codex (App oder CLI) oder Claude Code auf demselben Computer.
 
 ## Installation
@@ -58,8 +59,8 @@ Werkzeuge brauchen kein Plugin-Update: Sie kommen mit jedem ArchX-Update.
 
 ## Wenn etwas nicht geht
 
-- **«ArchX hat die Verbindung abgelehnt»:** Das Plugin steht Büros in der Schweiz und in Deutschland zur Verfügung. Prüfen
-  Sie in ArchX unter Einstellungen das Land des Büros.
+- **«ArchX hat die Verbindung abgelehnt»:** ArchX startet noch oder alle Verbindungen sind belegt. Den Auftrag gleich noch
+  einmal geben.
 - **«Keine installierte ArchX-App gefunden»:** ArchX von [architekten.frontierx.ch](https://architekten.frontierx.ch/archx/)
   installieren und einmal öffnen.
 - **«ArchX wurde gestartet, ist aber nicht erreichbar»:** ArchX einmal von Hand öffnen und anmelden.
@@ -68,3 +69,40 @@ Das Plugin läuft dort, wo Codex oder Claude auf Ihrem Computer arbeiten (Codex-
 oder claude.ai im Browser gibt es die ArchX-Werkzeuge nicht.
 
 ArchX ist ein Produkt von FrontierX, TYTOS GmbH, Kriens.
+
+## ArchX for Codex and Claude (United Kingdom and United States)
+
+With the plugin `archx-en`, Codex and Claude Code work with the professional tools of your installed ArchX app, in English.
+They are the same tools and instructions as in a conversation in ArchX, matching your office's country:
+
+- **United Kingdom:** permitted development check, householder application and Building Regulations, feasibility study,
+  area schedule, cost plan, schedule of works and tender report, contract administration, site photographs, excavation from
+  point clouds, reviewing drawings and checking consultants’ drawings, editing a floor plan, dimensioned 2D drawings, 3D
+  models and the ArchX help.
+- **United States:** code and permit review, zoning feasibility, quantities and cost planning, area schedule and occupant
+  load, bid leveling and bid packages, fee proposals, construction administration, phases and specifications, site photos
+  and observation reports, reviewing drawings, editing a floor plan, CAD drawings in feet and inches, 3D models on the real
+  site, excavation quantities and the ArchX help.
+
+Requirements: ArchX on the Mac or on Windows, signed in, with a license or a running trial; your office's country set to the
+United Kingdom or the United States (ArchX › Settings › Country); Codex (app or CLI) or Claude Code on the same computer.
+
+Installation in Codex: add the marketplace `tytos-ai/archx-plugin` and install ArchX (English), or in the terminal:
+
+```bash
+codex plugin marketplace add tytos-ai/archx-plugin
+codex plugin add archx-en@frontierx
+```
+
+Claude Code, in a session:
+
+```text
+/plugin marketplace add tytos-ai/archx-plugin
+/plugin install archx-en@frontierx
+```
+
+Then start a new conversation and ask, for example: “Check whether the rear extension in these drawings falls within
+permitted development.” or “Run a code and permit review for this project.” If the office's country changes in ArchX,
+start a new conversation: the other country's tools apply only there. New tools need no plugin update; they come with every
+ArchX update. Licence and data stay with ArchX: it checks the licence with every project tool and reads your drawings and
+tenders on your computer; Codex or Claude only receive the tools' results.

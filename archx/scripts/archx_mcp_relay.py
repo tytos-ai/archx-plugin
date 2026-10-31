@@ -34,13 +34,27 @@ REFUSED_RETRIES = 4
 WINDOWS = sys.platform == "win32"
 PLUGIN_START_SWITCH = "--archx-plugin-start"
 
-NOT_RUNNING = "ArchX läuft nicht (keine Verbindung unter {endpoint})."
-NOT_REACHABLE = ("ArchX wurde gestartet, ist aber nicht erreichbar. Öffnen Sie ArchX einmal von Hand und melden Sie sich an; "
-                 "ältere Versionen ohne Plugin-Anschluss bitte aktualisieren.")
-NO_APP = "Keine installierte ArchX-App gefunden. Installieren Sie ArchX von architekten.frontierx.ch."
-REFUSED = ("ArchX hat die Verbindung abgelehnt. Das ArchX-Plugin steht Büros in der Schweiz und in Deutschland zur Verfügung; "
-           "prüfen Sie in ArchX unter Einstellungen das Land des Büros.")
-ENDED = "ArchX wurde während des Aufrufs beendet. Bitte den Auftrag noch einmal geben."
+# The language of the plugin variant that started this relay: the English one (plugin/archx-en) sets ARCHX_PLUGIN_LANGUAGE=en
+# in its launcher; the German one (plugin/archx, Swiss and German offices) sets nothing. Both share this file byte for byte.
+ENGLISH = os.environ.get("ARCHX_PLUGIN_LANGUAGE") == "en"
+if ENGLISH:
+    NOT_RUNNING = "ArchX is not running (no connection at {endpoint})."
+    NOT_REACHABLE = ("ArchX was started but cannot be reached. Open ArchX once yourself and sign in; "
+                     "please update an older version without the plugin connection.")
+    NO_APP = "No installed ArchX app found. Install ArchX from architekten.frontierx.ch."
+    REFUSED = ("ArchX refused the connection: it is still starting or every connection is in use. "
+               "Please give the task again in a moment.")
+    ENDED = "ArchX was closed during the call. Please give the task again."
+    PLATFORM = "The ArchX plugin runs on macOS and Windows."
+else:
+    NOT_RUNNING = "ArchX läuft nicht (keine Verbindung unter {endpoint})."
+    NOT_REACHABLE = ("ArchX wurde gestartet, ist aber nicht erreichbar. Öffnen Sie ArchX einmal von Hand und melden Sie sich an; "
+                     "ältere Versionen ohne Plugin-Anschluss bitte aktualisieren.")
+    NO_APP = "Keine installierte ArchX-App gefunden. Installieren Sie ArchX von architekten.frontierx.ch."
+    REFUSED = ("ArchX hat die Verbindung abgelehnt: Die App startet noch oder alle Verbindungen sind belegt. "
+               "Bitte den Auftrag gleich noch einmal geben.")
+    ENDED = "ArchX wurde während des Aufrufs beendet. Bitte den Auftrag noch einmal geben."
+    PLATFORM = "Das ArchX-Plugin läuft unter macOS und Windows."
 
 if WINDOWS:
     import _winapi
@@ -70,7 +84,7 @@ def data_directory() -> str:
         return os.path.join(os.path.expanduser("~"), "Library", "Application Support", "ArchiGPT")
     if WINDOWS and os.environ.get("APPDATA"):
         return os.path.join(os.environ["APPDATA"], "ArchiGPT")
-    fail("Das ArchX-Plugin läuft unter macOS und Windows.")
+    fail(PLATFORM)
 
 
 def endpoint_of(directory: str, windows: bool = WINDOWS) -> str:

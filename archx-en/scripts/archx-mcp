@@ -1,0 +1,18 @@
+#!/bin/sh
+# Starts the English ArchX plugin's MCP connection: finds the installed ArchX app and relays to it with the Python ArchX
+# bundles. The same relay as plugin/archx, with its messages in English (ARCHX_PLUGIN_LANGUAGE=en).
+set -eu
+fail() { printf 'ArchX: %s\n' "$1" >&2; exit 1; }
+[ "$(uname -s)" = Darwin ] || fail 'The ArchX plugin runs on macOS and Windows.'
+app="${ARCHX_APP:-}"
+if [ -z "$app" ]; then
+  for candidate in /Applications/ArchX.app "${HOME:?}/Applications/ArchX.app"; do
+    if [ -d "$candidate" ]; then app="$candidate"; break; fi
+  done
+fi
+[ -n "$app" ] || fail 'No installed ArchX app found. Install ArchX from architekten.frontierx.ch.'
+python="$app/Contents/Resources/document-runtime/python/bin/python3"
+[ -x "$python" ] || fail "The ArchX installation at $app is incomplete. Install ArchX again."
+export ARCHX_APP="$app"
+export ARCHX_PLUGIN_LANGUAGE=en
+exec "$python" -I -B -X utf8 "$(dirname "$0")/archx_mcp_relay.py"

@@ -1,0 +1,29 @@
+{
+  "name": "archx-en",
+  "displayName": "ArchX",
+  "version": "0.1.7",
+  "description": "The professional tools of the installed ArchX app for architectural practices in the United Kingdom and architecture firms in the United States: planning and code checks, feasibility and zoning, areas, costs, tenders and bids, contract and construction administration, site photos, drawing review, floor plans, CAD drawings and 3D models.",
+  "author": {
+    "name": "FrontierX",
+    "url": "https://architekten.frontierx.ch"
+  },
+  "homepage": "https://architekten.frontierx.ch/archx/",
+  "license": "Proprietary",
+  "keywords": [
+    "architecture",
+    "united-kingdom",
+    "united-states",
+    "permitted-development",
+    "building-regulations",
+    "feasibility",
+    "zoning",
+    "code-review",
+    "cost-plan",
+    "tender",
+    "bid-leveling",
+    "contract-administration",
+    "construction-administration",
+    "ifc"
+  ],
+  "icon": "./assets/archx.png"
+}

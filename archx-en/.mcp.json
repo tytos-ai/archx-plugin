@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "archx": {
+      "command": "${CLAUDE_PLUGIN_ROOT}/scripts/archx-mcp",
+      "args": []
+    }
+  }
+}

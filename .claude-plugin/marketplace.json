@@ -1,6 +1,6 @@
 {
   "name": "frontierx",
-  "description": "Plugins von FrontierX für Architekturbüros.",
+  "description": "Plugins von FrontierX für Architekturbüros. FrontierX plugins for architectural practices.",
   "owner": {
     "name": "FrontierX",
     "url": "https://architekten.frontierx.ch"
@@ -10,6 +10,11 @@
       "name": "archx",
       "source": "./archx",
       "description": "Die Fachwerkzeuge der installierten ArchX-App für Büros in der Schweiz und in Deutschland: Mengen aus Plänen und IFC, Offertvergleich bzw. Angebotsprüfung, GAEB, Kosten, Nachweise, Machbarkeitsstudie und 3D-Modell."
+    },
+    {
+      "name": "archx-en",
+      "source": "./archx-en",
+      "description": "The professional tools of the installed ArchX app for architectural practices in the United Kingdom and architecture firms in the United States: planning and code checks, feasibility and zoning, areas, costs, tenders and bids, contract and construction administration, site photos, drawing review, floor plans, CAD drawings and 3D models."
     }
   ]
 }
