@@ -104,5 +104,5 @@ Claude Code, in a session:
 Then start a new conversation and ask, for example: “Check whether the rear extension in these drawings falls within
 permitted development.” or “Run a code and permit review for this project.” If the office's country changes in ArchX,
 start a new conversation: the other country's tools apply only there. New tools need no plugin update; they come with every
-ArchX update. Licence and data stay with ArchX: it checks the licence with every project tool and reads your drawings and
+ArchX update. License and data stay with ArchX: it checks the license with every project tool and reads your drawings and
 tenders on your computer; Codex or Claude only receive the tools' results.
